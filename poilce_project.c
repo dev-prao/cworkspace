@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void)
+int main_police_project(void)
 {
     char name[256];
     printf("이름이 뭐에요? ");

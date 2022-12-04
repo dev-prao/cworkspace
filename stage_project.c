@@ -9,7 +9,7 @@ void fail();
 
 	// 문이 5개가 있고, 각 문마다 점점 어려운 수식 퀴즈가 출제 (랜덤)
 	// 맞히면 통과, 틀리면 실패
-int main(void)
+int main_stgpj(void)
 {
     srand(time(NULL));
     int count = 0;

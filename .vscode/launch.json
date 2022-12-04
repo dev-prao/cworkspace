@@ -1,13 +1,26 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
-      "request": "launch",
-      "args": [],
-      "cwd": "/Users/prao/Desktop/DEV.PRAO/나도코딩/cworkspace",
-      "program": "/Users/prao/Desktop/DEV.PRAO/나도코딩/cworkspace/build/Debug/outDebug"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++ Runner: Debug Session",
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "/Users/prao/Desktop/DEV.PRAO/나도코딩/cworkspace",
+            "program": "/Users/prao/Desktop/DEV.PRAO/나도코딩/cworkspace/build/Debug/outDebug"
+        },
+        {
+            "name": "C/C++: gcc 활성 파일 빌드 및 디버그",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "C/C++: gcc 활성 파일 빌드"
+        }
+    ]
 }

@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-int main(void)
+int main_pj(void)
 {
     srand(time(NULL));
     printf("\n\n === 아빠는대머리 게임 === \n\n");
@@ -22,10 +22,7 @@ int main(void)
         {
             cntShowBottle = rand() % 2 + 2; // 보여줄 병의 개수(0~1, +2 -> 2, 3)
         } while (cntShowBottle == prevCntShowBottle);
-        if (cntShowBottle == prevCntShowBottle)
-        {
-            cntShowBottle = prevCntShowBottle + 1;
-        }
+        prevCntShowBottle = cntShowBottle;
         int isincluded = 0; // 보여줄 병 중에 발모제가 포함되었는지 여부
         printf(" > %d번째 시도 : ", i);
 
@@ -43,7 +40,7 @@ int main(void)
                     isincluded = 1;
                 }
             }
-            // 이미 선태고딘 병이면, 중복이르모 다시 선택
+            // 이미 선택된 병이면, 중복이므로 다시 선택
             else
             {
                 j--;
@@ -76,7 +73,7 @@ int main(void)
 
     if (answer == treatment+1)
     {
-        printf("\n >> 정답입니다!");
+        printf("\n >> 정답입니다!\n");
     }
     else
     {

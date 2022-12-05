@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 // 발모제 - 발모제 병 개수, 투약 횟수, 이전 보여줄 병, 현재 병
-int main(void)
+int main_selfhair(void)
 {
     srand(time(NULL));
     printf(" ==========자라나라 머리머리!!!==========\n\n");

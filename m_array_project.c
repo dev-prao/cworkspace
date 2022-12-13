@@ -24,7 +24,7 @@
     int foundAllAnimal();
 
 
-int main2(void)
+int main_card(void)
 {
     srand(time(NULL));
 

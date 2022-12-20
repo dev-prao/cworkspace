@@ -7,12 +7,22 @@ struct GameInfo {
     int year;
     int price;
     char * company;
-
+    
+    struct GameInfo * friendGame; // 연관 업체 게임
 
 
 };
 
-int main(void)
+typedef struct GameInformation {
+    char * name;
+    int year;
+    int price;
+    char * company;
+    
+    struct GameInfo * friendGame; // 연관 업체 게임
+} GAME_INFO;
+
+int main_struct(void)
 {
     // [게임 출시]
     // 이름 : 라오게임
@@ -44,7 +54,7 @@ int main(void)
     gameInfo1.year = 2022;
     gameInfo1.price = 50;
     gameInfo1.company = "라오회사";
-
+    
     // 구조체 출력
     printf("-- 게임 출시 정보 --\n");
     printf("   게임명   : %s\n", gameInfo1.name);
@@ -80,6 +90,39 @@ int main(void)
     printf("   가격     : %d\n", gamePtr->price);
     printf("   제작사   : %s\n", gamePtr->company);
 
+
+    // 연관 업체 게임 소개
+    gameInfo1.friendGame = &gameInfo2;
+    printf("\n\n-- 연관업체의 게임 출시 정보 --\n");
+    printf("   게임명   : %s\n", gameInfo1.friendGame->name);
+    printf("   발매년도 : %d\n", gameInfo1.friendGame->year);
+    printf("   가격     : %d\n", gameInfo1.friendGame->price);
+    printf("   제작사   : %s\n", gameInfo1.friendGame->company);
+
+    // typedef
+    // 자료형에 별명 지정
+    int i = 1;
+    typedef int 정수;
+    typedef float 실수;
+    정수 정수변수 = 3; // int i = 3;
+    실수 실수변수 = 3.14f; // float f = 3.23f;
+    printf("\n\n정수변수 : %d, 실수변수 %.2f\n\n", 정수변수, 실수변수);
+
+    typedef struct GameInfo 게임정보;
+    게임정보 game1;
+    game1.name = "한글 게임";
+    game1.year = 2022;
+    game1.price = 50;
+
+    GAME_INFO game2;
+    game2.name = "한글 게임2";
+    game2.year = 2021;
+    game2.price = 500;
+
+    struct GameInformation game3;
+    game3.name = "한글 게임3";
+    game3.year = 2020;
+    game3.price = 5000;
 
     return 0;
 }
